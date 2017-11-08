@@ -1,10 +1,18 @@
 source 'https://rubygems.org'
 
-
+# Durand should use this version of ruby
+ruby '2.3.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+# sqlite3 for devlopment and test database
+gem 'sqlite3', group: [:development, :test]
+
+# postgres for production database
+gem 'pg', group: :production
+
+#12 factor for Durand
+gem 'rails_12factor', group: :production
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
