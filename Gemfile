@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-# Durand should use this version of ruby
+# heroku should use this version of ruby
 ruby '2.3.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
@@ -11,8 +11,12 @@ gem 'sqlite3', group: [:development, :test]
 # postgres for production database
 gem 'pg', group: :production
 
-#12 factor for Durand
+#12 factor for heroku
 gem 'rails_12factor', group: :production
+
+#add twitter bootstrap
+gem 'bootstrap-sass'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
